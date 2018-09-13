@@ -1,0 +1,28 @@
+Team: Ruby A. and Sasha M.
+
+1. With reference to the construction of HMAC, explain how changing the design of the API
+in Part 1.2 to use token = HMACuser’s password(user=. . .) would avoid the length extension
+vulnerability.
+
+Answer:
+    HMAC uses tokens are hashed by parts.  The password itself is added to a hashed combination of the password and message information, t
+    his combination is then hashed.  HMAC essentially prevents a hacker from simply attaching the command to the end of the token to conduct the attack.  The hack
+    must first determine the passwords length to determine the padding of the token and then they can hash the message again and combine from there.
+
+2. Briefly explain why the technique you explored in Part 2.2 poses a danger to systems that rely
+on digital signatures to verify the integrity of programs before they are installed or executed.
+Examples include Microsoft Authenticode and most Linux package managers. (You may
+assume that these systems sign MD5 hashes of the programs.)
+
+Answer:
+    Many systems use md5 hashes to preform the checksum.  This is where two hashes are compared and if they match then the system can perform 
+    a task.  Md5 collisions have been around for years know and their are a lot of known collisions, if a checksum was generated with a known
+    collision the hacker could easily replicate the md5 hash.  Then create a collision resulting in the ability to download files containing malware
+    or even accessing different file systems.
+
+3. Since 2010, NIST has specified that RSA public exponents (e) should be at least 2^16 + 1.
+Briefly explain why Bleichenbacher’s attack would not work for these keys.
+
+Answer:
+    Using smaller exponentail powers like e^2 or e^3 have a square pattern and are easier to decipher. The larger the exponent the less predictable and harder to find
+    bad padding and it makes the process a lot slower for the hacker.
