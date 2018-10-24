@@ -1,0 +1,3 @@
+1. To defend against SQL injections, it is important to parameterize quaries. This allows you to differentiate between what is a valid data versus malicious code. If possible, checking the input data type with expected data type can also help differentiate between valid parameters and malicious code. Finally, it is important to not give errors as feedback as it can help the attacker figure out how to implement the attack correctly.  
+
+2. To defend against 
