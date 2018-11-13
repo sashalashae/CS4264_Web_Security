@@ -1,0 +1,62 @@
+# Question 1
+1. IP 1: 10.0.2.1, MAC 1: 00:26:08:e5:66:07 ; IP 2: 10.0.2.2, MAC 2: 04:0c:ce:d8:0f:fa ; IP 3: 10.0.2.3, MAC 3: 8c:a9:82:50:f0:a6 
+# Question 2
+2. This seems to be a local area network used by a few devices. The resolved addresses list shows the devices visiting websites such as facebook, youtube, and monkeynews.com. These websites are mostly personally used so they point towards the network being a small local area network for personal use.
+# Question 3
+3a. dl.xs4all.nl (number 14602)
+3b. The connection is active FTP because the client source port is on port 50952 which is greater than 1023 so it is running on an unprivileged port on the client side. 
+3c. The conversation between client and server is plaintext which is very unsecure.
+3d. SFTP or HTTPS. 
+# Question 4
+4a. statse.webtrends.akadns.net (66.150.117.25)
+4b. No, the ip address can be traced back to DNS even with HTTPS.  
+4c. Packet number: 22139
+Cipher Suites Length: 72 
+Cipher Suites (36 suites) 
+Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (0xce0a) 
+Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (exce14) 
+Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (0x0088) 
+Cipher Suite: TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA (0x0087) 
+Cipher Suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA (0x0039) 
+Cipher Suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA (0x0038) 
+Cipher Suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA (0xceef) 
+Cipher Suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA (exce05) 
+Cipher Suite: TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (0x0084) 
+Cipher Suite: TLS_RSA_WITH_AES_256_CBC_SHA (0x0035) 
+Cipher Suite: TLS_ECDHE_ECDSA_WITH_RC4_128_SHA (exce07) 
+Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (0xce09) 
+Cipher Suite: TLS_ECDHE_RSA_WITH_RC4_128_SHA (0xc011) 
+Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (exce13) 
+Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (0x0045) 
+Cipher Suite: TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA (0x0044) 
+Cipher Suite: TLS_DHE_DSS_WITH_RC4_128_SHA (0x0066) 
+Cipher Suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA (0x0033) 
+Cipher Suite: TLS_DHE_DSS_WITH_AES_128_CBC_SHA (0x0032) 
+Cipher Suite: TLS_ECDH_RSA_WITH_RC4_128_SHA (exce0c) 
+Cipher Suite: TLS_ECDH_RSA_WITH_AES_128_CBC_SHA (0xc00e) 
+Cipher Suite: TLS_ECDH_ECDSA_WITH_RC4_128_SHA (exce02) 
+Cipher Suite: TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA (exce04) 
+Cipher Suite: TLS_RSA_WITH_SEED_CBC_SHA (0x0096) 
+Cipher Suite: TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (0x0041) 
+Cipher Suite: TLS_RSA_WITH_RC4_128_SHA (0x0005) 
+Cipher Suite: TLS_RSA_WITH_RC4_128_MD5 (0x0004) 
+Cipher Suite: TLS_RSA_WITH_AES_128_CBC_SHA (0x002f) 
+Cipher Suite: TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA (exce08) 
+Cipher Suite: TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (exce12) 
+Cipher Suite: TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (0x0016) 
+Cipher Suite: TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA (0x0013) 
+Cipher Suite: TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA (exceed) 
+Cipher Suite: TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA (0xce03) 
+Cipher Suite: SSL_RSA_FIPS_WITH_3DES_EDE_CBC_SHA (Oxfeff) 
+Cipher Suite: TLS_RSA_WITH_3DES_EDE_CBC_SHA (0x000a) 
+4d. Cipher Suite: TLS_RSA_WITH_RC4_128_MD5 (0x0004). MD5 has been broken. 
+4e. Packet number: 21648. Cipher Suite: TLS_RSA_WITH_RC4_128_MD5 
+# Question 5
+5a. Even though begning of the conversation is made using HTTPS (on port 443), after the initial authentcation, regular HTTP GET requests (on port 80) are being made. 
+5b. Attacker can see the unencrypted data of the HTTP GET request and use it to impersonate the user on Facebook.
+5c. Make sure to use HTTS whenever visiting the website.  
+5d. Went to "Home" page (packet number: 8157)
+Searched for: z (packet number: 8368)
+Searched for: zak (packet number: 8371)
+Searched for: zakir (packet number: 8386)
+Went to profile link: facebook.com/zakirbpd (packet number: 10967)
