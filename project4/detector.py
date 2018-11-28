@@ -32,9 +32,8 @@ for ts, buf in pcap:
                         ip_list.append({"src": ip.dst, "syn": 0, "ack": 1})
     except:
         continue
-
+fileDes.close()
 for item in ip_list:
     if item["syn"] >= 3*item["ack"]:
         print socket.inet_ntoa(item["src"])
-
-fileDes.close()
+print "\n"
